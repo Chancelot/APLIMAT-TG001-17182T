@@ -43,7 +43,7 @@ namespace aplimat_labs
 
 		//private Randomizer rng = new Randomizer(HEADS,TAILS);
 		public Randomizer rng = new Randomizer(20, -20);
-
+		public Randomizer colorrng = new Randomizer(0, 1);
 		private List<CubeMesh> myCubes = new List<CubeMesh>();
 		public MainWindow()
 		{
@@ -78,7 +78,8 @@ namespace aplimat_labs
 			foreach (var cube in myCubes)
 			{
 				cube.Draw(gl);
-				cube.Position += new Vector3(0, rng.GenerateDouble() - 1, 0);
+				cube.Position += new Vector3(rng.GenerateDouble(), rng.GenerateDouble() - 1, 0);
+				gl.Color(colorrng.GenerateDouble(), colorrng.GenerateDouble(), colorrng.GenerateDouble());
 			}
 
 			
@@ -235,8 +236,8 @@ namespace aplimat_labs
 			gl.Light(OpenGL.GL_LIGHT0, OpenGL.GL_AMBIENT, light0ambient);
 			gl.Light(OpenGL.GL_LIGHT0, OpenGL.GL_DIFFUSE, light0diffuse);
 			gl.Light(OpenGL.GL_LIGHT0, OpenGL.GL_SPECULAR, light0specular);
-			gl.Enable(OpenGL.GL_LIGHTING);
-			gl.Enable(OpenGL.GL_LIGHT0);
+			gl.Disable(OpenGL.GL_LIGHTING);
+			gl.Disable(OpenGL.GL_LIGHT0);
 
 			gl.ShadeModel(OpenGL.GL_SMOOTH);
 
