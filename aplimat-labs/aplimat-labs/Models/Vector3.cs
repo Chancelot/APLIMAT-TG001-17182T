@@ -44,5 +44,45 @@ namespace aplimat_labs
                 rhs.y - lhs.y,
                 rhs.z - lhs.z);
         }
-    }
+        public static Vector3 operator *(Vector3 left, float scalar)
+        {
+            return new Vector3(left.x * scalar,
+                    left.y * scalar,
+                    left.z * scalar);
+        }
+        public static Vector3 operator /(Vector3 left, float scalar)
+        {
+            return new Vector3(left.x * scalar,
+                    left.y * scalar,
+                    left.z * scalar);
+        }
+        public float GetMagnitute()
+        {
+            return (float)Math.Sqrt((x * x)+(y * y)+(z * z));
+        }
+
+		public Vector3 Normalize()
+		{
+			float length = GetMagnitute();
+			if (this.x != 0) this.x /= length;
+			if (this.y != 0) this.y /= length;
+			if (this.z != 0) this.z /= length;
+
+			return new Vector3(x, y, z);
+		}
+
+		public void Clamp(Vector3 limit)
+		{
+			if (this.x >= limit.x) this.x = limit.x;
+			if (this.y >= limit.x) this.y = limit.x;
+			if (this.z >= limit.x) this.z = limit.x;
+		}
+
+		public void Clamp(float limit)
+		{
+			if (this.x >= limit) this.x = limit;
+			if (this.y >= limit) this.y = limit;
+			if (this.z >= limit) this.z = limit;
+		}
+	}
 }
