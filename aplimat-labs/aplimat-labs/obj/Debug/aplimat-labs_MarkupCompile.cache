@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\11404848\Downloads\APLIMAT\APLIMAT-TG001-17182T\APLIMAT-TG001-17182T\aplimat-labs\aplimat-labs\obj\Debug\
+=======
+C:\Users\11404848\Documents\GitHub\APLIMAT-TG001-18T\aplimat-labs\aplimat-labs\obj\Debug\
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
 aplimat_labs
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\11404848\Downloads\APLIMAT\APLIMAT-TG001-17182T\APLIMAT-TG001-17182T\aplimat-labs\aplimat-labs\App.xaml
 11151548125
 
 102067066821
 16395311685
+=======
+C:\Users\11404848\Documents\GitHub\APLIMAT-TG001-18T\aplimat-labs\aplimat-labs\App.xaml
+11151548125
+
+91549173481
+161376179300
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
 MainWindow.xaml;
 
 False

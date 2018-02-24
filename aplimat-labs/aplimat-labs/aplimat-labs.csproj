@@ -67,9 +67,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< HEAD
     <Compile Include="Models\CubeMesh.cs" />
     <Compile Include="Models\Movable.cs" />
     <Compile Include="Models\Vector3.cs" />
+=======
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
     <Compile Include="Utilities\Gaussian.cs" />
     <Compile Include="Utilities\Randomizer.cs" />
     <Page Include="MainWindow.xaml">
@@ -86,6 +89,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CubeMesh.cs" />
+    <Compile Include="Models\Vector3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

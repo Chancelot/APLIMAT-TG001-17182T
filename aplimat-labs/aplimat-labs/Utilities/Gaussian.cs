@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace aplimat_labs.Utilities
 {
+<<<<<<< HEAD
     public static class Gaussian
     {
         public static double Generate(double mean = 0, double stdDev = 1)
@@ -20,4 +21,21 @@ namespace aplimat_labs.Utilities
                 return mean + stdDev * randomStandardNormal;
         }
     }
+=======
+	class Gaussian
+	{
+		public static double Generate(double mean = 0, double stdDev = 1)
+		{
+			Random r = new Random();
+
+			var u1 = r.NextDouble();
+			var u2 = r.NextDouble();
+
+			var randomStandardNormal = Math.Sqrt(-2.0 * Math.Log(u1))
+				* Math.Sin(2.0 * Math.PI * u2);
+
+			return mean + stdDev * randomStandardNormal;
+		}
+	}
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
 }

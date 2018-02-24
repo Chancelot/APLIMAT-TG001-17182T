@@ -14,7 +14,11 @@ namespace aplimat_labs.Utilities
         public Randomizer(double _min, double _max)
         {
             this.min = _min;
+<<<<<<< HEAD
             this.max = _max + 1; //add one because Random's max is exclusive value
+=======
+            this.max = _max + 1; //add one because
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
             this.random = new Random();
         }
 
@@ -28,4 +32,8 @@ namespace aplimat_labs.Utilities
             return (int)random.Next((int)min, (int)max);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using aplimat_labs.Utilities;
+=======
+﻿using aplimat_labs.Models;
+using aplimat_labs.Utilities;
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
 using SharpGL;
 using SharpGL.SceneGraph.Primitives;
 using System;
@@ -26,6 +31,7 @@ namespace aplimat_labs
 		public MainWindow()
 		{
 			InitializeComponent();
+<<<<<<< HEAD
 			//myVector = a - b;
 			//Console.WriteLine(myVector.GetMagnitute());
 
@@ -104,14 +110,86 @@ namespace aplimat_labs
 
 			//CubeMesh myCube = new CubeMesh();
 			//Randomizer rng = new Randomizer(-20, 20);
+=======
+			myVector = a - b;
+			Console.WriteLine(myVector.GetMagnitute());
+
+			//while (true) Console.WriteLine(rng.Generate());
+		}
+
+		//private CubeMesh myCube = new CubeMesh();
+
+		public Randomizer COLORrng = new Randomizer(0, 1);
+		//private List<CubeMesh> myCubes = new List<CubeMesh>();
+		private CubeMesh myCube = new CubeMesh();
+		private Vector3 velocity = new Vector3(1, 1, 0);
+		private float speed = 2.0f;
+
+		private Vector3 myVector = new Vector3();
+
+		private Vector3 a = new Vector3(3, 5, 0);
+		private Vector3 b = new Vector3(-7, -6, 0);
+		private Vector3 c = new Vector3(4, 6, 0);
+		private Vector3 d = new Vector3(-8, -7, 0);
+
+
+		private void OpenGLControl_OpenGLDraw(object sender, SharpGL.SceneGraph.OpenGLEventArgs args)
+		{
+			OpenGL gl = args.OpenGL;
+			myVector = a - b;
+			// Clear The Screen And The Depth Buffer
+			gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
+
+			// Move Left And Into The Screen
+			gl.LoadIdentity();
+			gl.Translate(0.0f, 0.0f, -40.0f);
+			//vector a
+			gl.Color(5.0f, 0.0f, 1.0f);
+
+			gl.LineWidth(500);
+			gl.Begin(OpenGL.GL_LINE_STRIP);
+			gl.Vertex(a.x, a.y);
+			gl.Vertex(b.x, b.y);
+			gl.End();
+
+			gl.LineWidth(500);
+			gl.Begin(OpenGL.GL_LINE_STRIP);
+			gl.Vertex(c.x, c.y);
+			gl.Vertex(d.x, d.y);
+			gl.End();
+
+
+
+
+
+			gl.DrawText(0, 0, 1, 1, 1, "Arial", 15, "Force Power: " + myVector.GetMagnitute());
+
+			
+
+
+			// CubeMesh myCube = new CubeMesh();
+			Randomizer rng = new Randomizer(-20, 20);
+
+
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
 			//myCube.Position = new Vector3(Gaussian.Generate(0, 15), 0, 0);
 
 			//myCubes.Add(myCube);
 			//foreach (var cube in myCubes)
+<<<<<<< HEAD
 			//{
 			//    myCube.Draw(gl);
 			//    cube.Position += new Vector3(0, rng.GenerateDouble(), 0);
 			//    gl.Color(COLORrng.GenerateDouble(), COLORrng.GenerateDouble(), COLORrng.GenerateDouble());
+=======
+			// {
+			// myCube.Draw(gl);
+
+			//cube.Position += new Vector3(0, rng.GenerateDouble(), 0);
+			//  gl.Color(COLORrng.GenerateDouble(), COLORrng.GenerateDouble(), COLORrng.GenerateDouble());
+
+
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
 			//}
 
 		}
@@ -141,6 +219,7 @@ namespace aplimat_labs
 
 			gl.ShadeModel(OpenGL.GL_SMOOTH);
 		}
+<<<<<<< HEAD
 
 		private void OpenGLControl_MouseMove(object sender, MouseEventArgs e)
 		{
@@ -152,5 +231,7 @@ namespace aplimat_labs
 
 			//Console.WriteLine("mouse x: " + mousePos.x + " y: " + mousePos.y);
 		}
+=======
+>>>>>>> c79c0b298f8088a0c70a564e5dbdd0420038b0ef
 	}
 }
